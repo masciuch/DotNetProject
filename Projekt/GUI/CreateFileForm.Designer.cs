@@ -38,6 +38,7 @@
             this.uiTbRepeatPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,11 +124,23 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(224, 329);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(93, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "GitHub Repository";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // CreateFileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 336);
+            this.ClientSize = new System.Drawing.Size(543, 351);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uiTbRepeatPassword);
@@ -156,6 +169,7 @@
         private System.Windows.Forms.TextBox uiTbRepeatPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

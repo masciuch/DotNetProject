@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenFileForm));
             this.uiTbPath = new System.Windows.Forms.TextBox();
             this.uiBtnBrowse = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.uiBtnLoad = new System.Windows.Forms.Button();
             this.uiBtnCreateNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +105,7 @@
             this.uiBtnCreateNew.Size = new System.Drawing.Size(515, 23);
             this.uiBtnCreateNew.TabIndex = 6;
             this.uiBtnCreateNew.Text = "Utwórz nowy";
+            this.toolTip1.SetToolTip(this.uiBtnCreateNew, "Utwórz nowy plik przechowujący hasła.");
             this.uiBtnCreateNew.UseVisualStyleBackColor = true;
             this.uiBtnCreateNew.Click += new System.EventHandler(this.uiBtnCreateNew_Click);
             // 
@@ -115,11 +119,23 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(222, 307);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(93, 13);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "GitHub Repository";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // OpenFileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 311);
+            this.ClientSize = new System.Drawing.Size(539, 329);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.uiBtnCreateNew);
             this.Controls.Add(this.uiBtnLoad);
@@ -147,6 +163,8 @@
         private System.Windows.Forms.Button uiBtnLoad;
         private System.Windows.Forms.Button uiBtnCreateNew;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
